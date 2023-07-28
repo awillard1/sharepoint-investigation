@@ -26,6 +26,8 @@ The API provided us with a url with the tempauth parameter that allows anyone wi
 https://REDACTED-my.sharepoint.com/personal/REDACTED/_layouts/15/download.aspx?UniqueId=REDACTED&Translate=false&tempauth=<<<<TOKEN!!!>>>>&ApiVersion=2.1
 ```
 
+I also used a not so elegant version of the stealing of the token. It basically would show up as an image (`/tiny.png?steal_bs=`) access with a querystring stored in access.log. Then I decided it may be more useful to use a file such as spimage.php.
+
 ### What is in spimage.php?
 
 ```
