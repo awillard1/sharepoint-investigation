@@ -12,4 +12,7 @@ What was I able to do if a user accessed the XSS:
 
 The interactions happened against the drive API and also could be done using graphql.
 
-The Delete required the stealing of tokens from other requests.
+The Delete required the stealing of tokens from other requests. This can be seen in the following function calls of delete_files.js
+- stealBearer
+- getDigest
+
