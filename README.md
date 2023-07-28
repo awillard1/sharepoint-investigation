@@ -1,5 +1,10 @@
 # SharePoint JavaScript/API Investigation
 
+- All the information provided on this site is for educational purposes only.
+- The site or the authors are not responsible for any misuse of the information.
+- You shall not misuse the information to gain unauthorized access and/or write malicious programs.
+- The information shall only be used to expand knowledge and not for causing malicious or damaging attacks.
+
 Due to discovery of XSS in SharePoint on-premise and their hosted solutions, I was asked to see what could be done with the XSS. I hosted a few JavaScript files during the investigation since I was able to inject a script tag and use the src attribute to link to the hosted files.
 
 I also was able to use a version of SharePoint that had the aspx file rendering and I was able to use that to create files with embedded payloads and made the files look like they belonged in SharePoint.
