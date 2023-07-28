@@ -1,5 +1,4 @@
-# sharepoint-investigation
-SharePoint JavaScript/API Investigation
+# SharePoint JavaScript/API Investigation
 
 Due to discovery of XSS in SharePoint On-Premise and Microsoft 365 this past year (along with a few in the past), I was asked to see what could be done with the XSS. I hosted a few JavaScript files during the investigation since I was able to inject a script tag and use the src attribute to link to the hosted files.
 
