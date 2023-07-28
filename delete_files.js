@@ -1,4 +1,3 @@
-
 document.write("<iframe src='/' id='whoareu' border=0 width=1 height=1></iframe>");const myTimeout = setTimeout(whoareu, 2000);
 function whoareu() {
   var theurl=document.getElementById('whoareu').contentWindow.location.href;
