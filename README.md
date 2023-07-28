@@ -19,7 +19,7 @@ What was I able to do if a user accessed the XSS:
 The interactions happened against the drive API and also could be done using graphql.
 
 ## How could you steal file?
-Well, the API created URLs with an authorization token. By stealing that URL, it was easy to just access
+Well, the drive API creates a JSON object with URLs that have an authorization token. By stealing that URL for each file, it was easy to just access it.
 
 For the listing of all of a user's files, it was simple enough to just call out to the user's drive API (depends on API version):
 - var t = "/_api/v2.1/drive/items/root";
